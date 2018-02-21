@@ -1,0 +1,13 @@
+notifications:
+  email: false
+
+language: python
+
+services:
+  - docker
+
+install:
+  - make build
+
+script:
+  - make test
