@@ -68,4 +68,4 @@ Contributors
 
 The list of contributors in alphabetical order:
 
-- `Tibor Simko <https://orcid.org/0000-0001-7202-5803>`_ <tibor.simko@cern.ch>
+- `Tibor Simko <https://orcid.org/0000-0001-7202-5803>`_
