@@ -7,7 +7,7 @@ build: Dockerfile
 	docker build -t $(IMAGE) .
 
 test:
-	docker run -i -t --rm $(IMAGE) jupyter nbconvert --version | grep -q ^5.3.1
+	docker run -i -t --rm $(IMAGE) jupyter --version | grep -q ^4.4.0
 
 push:
 	docker push $(IMAGE)
