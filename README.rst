@@ -2,8 +2,8 @@
  REANA Environment Jupyter
 ===========================
 
-.. image:: https://img.shields.io/travis/reanahub/reana-env-jupyter.svg
-   :target: https://travis-ci.org/reanahub/reana-env-jupyter
+.. image:: https://github.com/reanahub/reana-env-jupyter/workflows/CI/badge.svg
+   :target: https://github.com/reanahub/reana-env-jupyter/actions
 
 .. image:: https://badges.gitter.im/Join%20Chat.svg
    :target: https://gitter.im/reanahub/reana?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge
