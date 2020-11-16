@@ -1,10 +1,17 @@
 # Environment: Jupyter 1.0.0 with IPython 5.0.0 kernel on CentOS7
 FROM centos:7
-RUN yum install -y epel-release
+
+# hadolint ignore=DL3033
+RUN yum install -y epel-release && yum clean all
+
+# hadolint ignore=DL3033
 RUN yum install -y \
       gcc \
       python-devel \
-      python-pip
+      python-pip \
+      && yum clean all
+
+# hadolint ignore=DL3013
 RUN pip install --upgrade pip
 RUN pip install \
       ipython==5.0.0 \
