@@ -10,7 +10,7 @@ test:
 	docker run -i --rm $(IMAGE) jupyter --version | grep -q ^4.4.0
 
 lint:
-	docker run -i --rm hadolint/hadolint < Dockerfile
+	docker run -i --rm hadolint/hadolint:v1.18.2 < Dockerfile
 
 push:
 	docker push $(IMAGE)
