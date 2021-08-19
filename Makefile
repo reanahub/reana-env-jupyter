@@ -7,7 +7,7 @@ build: Dockerfile
 	docker build -t $(IMAGE) .
 
 test:
-	docker run -i --rm $(IMAGE) jupyter --version | grep -q ^4.4.0
+	docker run -i --rm $(IMAGE) jupyter --version | grep -q "jupyter core     : 4.7.1"
 
 lint:
 	docker run -i --rm hadolint/hadolint:v1.18.2 < Dockerfile
