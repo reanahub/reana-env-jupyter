@@ -17,7 +17,7 @@ RUN yum install -y \
 
 # hadolint ignore=DL3013
 RUN pip3 install --upgrade pip
-RUN pip3 install \
+RUN pip3 install --no-cache-dir \
       ipython==7.16.1 \
       jupyter==1.0.0 \
       jupyter-client==6.1.12 \
