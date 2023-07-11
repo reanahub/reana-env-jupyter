@@ -1,5 +1,5 @@
 # Environment: Jupyter 1.0.0 with IPython 5.0.0 kernel on CentOS7
-FROM centos:7
+FROM docker.io/library/centos:7
 
 # Set system locale
 ENV LC_ALL=en_US.UTF-8

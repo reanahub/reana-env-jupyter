@@ -37,7 +37,7 @@ Alternatively, you can also use ``reana-env-jupyter`` as a base image for
 notebook-based analyses. Just start your ``Dockerfile`` from this base image and
 add your own custom code on top::
 
-   FROM reanahub/reana-env-jupyter
+   FROM docker.io/reanahub/reana-env-jupyter
    ADD my-notebook.ipynb /code/
    [...]
 

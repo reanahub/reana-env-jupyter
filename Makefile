@@ -1,4 +1,4 @@
-IMAGE=reanahub/reana-env-jupyter
+IMAGE=docker.io/reanahub/reana-env-jupyter
 
 all:
 	@echo "Usage: make <action> where action is build, test, or push."
@@ -10,7 +10,7 @@ test:
 	docker run -i --rm $(IMAGE) jupyter --version | grep -q "jupyter core     : 4.7.1"
 
 lint:
-	docker run -i --rm hadolint/hadolint:v1.18.2 < Dockerfile
+	docker run -i --rm docker.io/hadolint/hadolint:v1.18.2 < Dockerfile
 
 push:
 	docker push $(IMAGE)
