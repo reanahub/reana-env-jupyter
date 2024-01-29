@@ -62,12 +62,3 @@ More information
 For more information about the REANA reusable analysis platform, please see the
 `REANA project <http://www.reana.io>`_ home page and the general `REANA
 documentation <http://reana.readthedocs.io/>`_ pages.
-
-Contributors
-============
-
-The list of contributors in alphabetical order:
-
-- `Marco Vidal <https://orcid.org/0000-0002-9363-4971>`_
-- `Sinclert Perez <https://www.linkedin.com/in/sinclert>`_
-- `Tibor Simko <https://orcid.org/0000-0001-7202-5803>`_
