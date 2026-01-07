@@ -9,10 +9,10 @@
 `reana-env-jupyter` provides a container image with encapsulated runtime execution
 environment for [Jupyter](https://jupyter.org/) notebook based data analyses. It is
 basically an example how a user could encapsulate a notebook environment using Jupyter
-1.0 notebooks with IPython 5.0 kernel running on CentOS7 platform. The container also
+notebooks with IPython kernel running on Ubuntu 24.04 platform. The container also
 provides several convenient Python packages such as [Pandas](https://pandas.pydata.org/)
 data analysis library or [Papermill](https://github.com/nteract/papermill) notebook
-parametrisation and execution uitlity.
+parametrisation and execution utility.
 
 `reana-env-jupyter` was developed for use in the [REANA](http://www.reana.io/) reusable
 and reproducible research data analysis platform.

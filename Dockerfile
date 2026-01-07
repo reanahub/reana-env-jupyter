@@ -1,37 +1,30 @@
-# Environment: Jupyter 1.0.0 with IPython 5.0.0 kernel on CentOS7
-FROM docker.io/library/centos:7
+# Environment: Jupyter 1.1.1 on Ubuntu 24.04
+FROM docker.io/library/ubuntu:24.04
 
 # Set system locale
-ENV LC_ALL=en_US.UTF-8
-ENV LANG=en_US.UTF-8
+ENV LC_ALL=C.UTF-8
+ENV LANG=C.UTF-8
 
-# hadolint ignore=DL3033
-RUN yum install -y epel-release && yum clean all
-
-# hadolint ignore=DL3033
-RUN yum install -y \
-      gcc \
-      python3-devel \
-      python3-pip \
-      && yum clean all
+# Install system dependencies
+# hadolint ignore=DL3008
+RUN apt-get update && \
+  apt-get install -y --no-install-recommends \
+  gcc \
+  python3 \
+  python3-dev \
+  python3-pip && \
+  apt-get clean && \
+  rm -rf /var/lib/apt/lists/*
 
 # hadolint ignore=DL3013
-RUN pip3 install --no-cache-dir --upgrade pip && \
-    pip3 install --no-cache-dir \
-      ipython==7.16.1 \
-      jupyter==1.0.0 \
-      jupyter-client==6.1.12 \
-      jupyter-console==6.4.0 \
-      jupyter-core==4.7.1 \
-      matplotlib==3.3.4 \
-      nbconvert==6.0.7 \
-      pandas==1.1.5 \
-      papermill==2.3.3 \
-      # FIXME: Pin black to be able to create the cache folders manually and avoid errors.
-      # Related issue: https://github.com/nteract/papermill/issues/498
-      black==21.7b0 \
-      ipykernel==5.5.5
-
-# FIXME: Create `black` cache folder manually
-# hadolint ignore=SC2174
-RUN mkdir -m 770 -p /.cache/black/21.7b0/
+RUN pip install --no-cache-dir --break-system-packages \
+  ipykernel==6.29.5 \
+  ipython==8.31.0 \
+  jupyter-client==8.6.3 \
+  jupyter-console==6.6.3 \
+  jupyter-core==5.7.2 \
+  jupyter==1.1.1 \
+  matplotlib==3.10.0 \
+  nbconvert==7.16.5 \
+  pandas==2.2.3 \
+  papermill==2.6.0
