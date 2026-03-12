@@ -36,8 +36,7 @@ ADD my-notebook.ipynb /code/
 Here are several complete examples on how to use `reana-env-jupyter` environment
 in your analyses:
 
--
-[reana-demo-worldpopulation](https://github.com/reanahub/reana-demo-worldpopulation)
+- [reana-demo-worldpopulation](https://github.com/reanahub/reana-demo-worldpopulation)
 
 ## Development
 
